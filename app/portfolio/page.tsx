@@ -1,0 +1,5 @@
+const projects = [{ number: "01", title: "Sova", place: "Recon / info control", className: "image-sova" }, { number: "02", title: "Breach", place: "Entry / site take", className: "image-breach" }, { number: "03", title: "KAY/O", place: "Suppress / clear", className: "image-kayo" }, { number: "04", title: "Fade", place: "Haunt / site reveal", className: "image-fade" }];
+
+export default function Portfolio() {
+  return <main className="inner-page"><section className="page-grid page-heading"><p className="eyebrow">Agent pool / initiator</p><h1>Play the<br /><em>opening.</em></h1><p className="heading-note">A flexible initiator pool built around information, disruption, and confident calls.</p></section><section className="project-list page-grid">{projects.map((project) => <article className="project-row" key={project.number}><div className={`project-image image-frame ${project.className}`} role="img" aria-label={project.title} /><div className="project-meta"><span>{project.number}</span><h2>{project.title}</h2><p>{project.place}</p></div><span className="project-arrow">↗</span></article>)}</section></main>;
+}

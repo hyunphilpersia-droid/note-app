@@ -1,0 +1,5 @@
+const images = [["image-map-abyss", "Abyss"], ["image-map-ascent", "Ascent"], ["image-map-haven", "Haven"], ["image-map-split", "Split"], ["image-map-summit", "Summit"], ["image-map-sunset", "Sunset"]];
+
+export default function Gallery() {
+  return <main className="inner-page gallery-page"><section className="page-grid page-heading gallery-heading"><div><p className="eyebrow">Map pool / Valorant</p><h1>Know the<br /><em>terrain.</em></h1></div><p className="heading-note">Every site has a timing. Every angle has a way through.</p></section><section className="gallery-grid page-grid" aria-label="Valorant maps">{images.map(([className, label], index) => <figure className={`gallery-item ${index % 3 === 1 ? "gallery-tall" : ""}`} key={label}><div className={`image-frame ${className}`} role="img" aria-label={`${label} Valorant map`} /><figcaption>{label}</figcaption></figure>)}</section></main>;
+}
